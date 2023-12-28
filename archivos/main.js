@@ -44,7 +44,7 @@ function init() {
     camera.position.y = 7000;
 
 
-    const path = 'texture/nebula-';
+    const path = 'archivos/texture/nebula-';
     const format = '.png';
     const urls = [
         path + 'xpos' + format, path + 'xneg' + format,
@@ -84,7 +84,7 @@ function init() {
 
 function sistemaSolar(){
     const sunGeo = new THREE.SphereGeometry(sunSize, 100, 50);
-    const sunTex = new THREE.TextureLoader().load("texture/sun.jpg");
+    const sunTex = new THREE.TextureLoader().load("archivos/texture/sun.jpg");
     const sunMat = new THREE.MeshPhongMaterial( {
         map: sunTex,
         flatShading: true,
@@ -142,7 +142,7 @@ function sistemaSolar(){
 
 
     const mercuryGeo = new THREE.SphereGeometry( sizesScale/285, 200, 100 );
-    const mercuryTex = new THREE.TextureLoader().load("texture/mercury.webp")
+    const mercuryTex = new THREE.TextureLoader().load("archivos/texture/mercury.webp")
     const mercuryMat = new THREE.MeshPhongMaterial( { map: mercuryTex, flatShading: true } );
     mercury = new THREE.Mesh(mercuryGeo,mercuryMat);
     mercury.rotation.x = 0.03*Math.PI/180;
@@ -154,7 +154,7 @@ function sistemaSolar(){
 
 
     const venusGeo = new THREE.SphereGeometry( sizesScale/115, 200, 100 );
-    const venusTex = new THREE.TextureLoader().load("texture/venus.jpg")
+    const venusTex = new THREE.TextureLoader().load("archivos/texture/venus.jpg")
     const venusMat = new THREE.MeshPhongMaterial( { map: venusTex, flatShading: true } );
     venus = new THREE.Mesh(venusGeo,venusMat);
     venus.rotation.x = 2.64*Math.PI/180;
@@ -163,7 +163,7 @@ function sistemaSolar(){
     orbita(distancesScale, movVenus, aVenus);
 
     const earthGeo = new THREE.SphereGeometry( sizesScale/109, 200, 100 );
-    const earthTex = new THREE.TextureLoader().load("texture/earth.webp")
+    const earthTex = new THREE.TextureLoader().load("archivos/texture/earth.webp")
     const earthMat = new THREE.MeshPhongMaterial( { map: earthTex, flatShading: true } );
     earth = new THREE.Mesh(earthGeo,earthMat);
     earth.rotation.x = 23.44*Math.PI/180;
@@ -173,7 +173,7 @@ function sistemaSolar(){
 
 
     const moonGeo = new THREE.SphereGeometry( sizesScale/401, 50, 25 );
-    const moonTex = new THREE.TextureLoader().load("texture/moon.jpg")
+    const moonTex = new THREE.TextureLoader().load("archivos/texture/moon.jpg")
     const moonMat = new THREE.MeshPhongMaterial( {map: moonTex, flatShading: true } );
     moon = new THREE.Mesh(moonGeo, moonMat);
     moon.rotation.x = 6.68*Math.PI/180;
@@ -186,7 +186,7 @@ function sistemaSolar(){
 
 
     const marsGeo = new THREE.SphereGeometry( sizesScale/205, 200, 100 );
-    const marsTex = new THREE.TextureLoader().load("texture/mars.jpg")
+    const marsTex = new THREE.TextureLoader().load("archivos/texture/mars.jpg")
     const marsMat = new THREE.MeshPhongMaterial( { map: marsTex, flatShading: true } );
     mars = new THREE.Mesh(marsGeo,marsMat);
     mars.rotation.x = 25.19*Math.PI/180;
@@ -195,7 +195,7 @@ function sistemaSolar(){
     orbita(distancesScale, movMars, aMars);
 
     const jupiterGeo = new THREE.SphereGeometry( sizesScale/10, 200, 100 );
-    const jupiterTex = new THREE.TextureLoader().load("texture/jupiter.jpg")
+    const jupiterTex = new THREE.TextureLoader().load("archivos/texture/jupiter.jpg")
     const jupiterMat = new THREE.MeshPhongMaterial( { map: jupiterTex, flatShading: true } );
     jupiter = new THREE.Mesh(jupiterGeo,jupiterMat);
     jupiter.rotation.x = 3.13*Math.PI/180;
@@ -204,7 +204,7 @@ function sistemaSolar(){
     orbita(distancesScale, movJupiter, aJupiter);
 
     const saturnGeo = new THREE.SphereGeometry( sizesScale/12, 200, 100 );
-    const saturnTex = new THREE.TextureLoader().load("texture/saturn.jpg")
+    const saturnTex = new THREE.TextureLoader().load("archivos/texture/saturn.jpg")
     const saturnMat = new THREE.MeshPhongMaterial( { map: saturnTex, flatShading: true } );
     saturn = new THREE.Mesh(saturnGeo,saturnMat);
     saturn.rotation.x = 26.73*Math.PI/180;
@@ -213,7 +213,7 @@ function sistemaSolar(){
     orbita(distancesScale, movSaturn, aSaturn);
 
     const ringsGeo = new THREE.RingGeometry(sizesScale/10,sizesScale/4.93858,64);
-    const ringsTex = new THREE.TextureLoader().load("texture/rings.jpg")
+    const ringsTex = new THREE.TextureLoader().load("archivos/texture/rings.jpg")
 
     const pos = ringsGeo.attributes.position;
     const uv = ringsGeo.attributes.uv;
@@ -239,7 +239,7 @@ function sistemaSolar(){
 
 
     const uranusGeo = new THREE.SphereGeometry( sizesScale/27, 200, 100 );
-    const uranusTex = new THREE.TextureLoader().load("texture/uranus.webp");
+    const uranusTex = new THREE.TextureLoader().load("archivos/texture/uranus.webp");
     const uranusMat = new THREE.MeshPhongMaterial( { map: uranusTex, flatShading: true } );
     uranus = new THREE.Mesh(uranusGeo,uranusMat);
     uranus.rotation.x = 82.23*Math.PI/180;
@@ -248,7 +248,7 @@ function sistemaSolar(){
     orbita(distancesScale, movUranus, aUranus);
 
     const ringsGeo2 = new THREE.RingGeometry(sizesScale/25,sizesScale/13.61395,64);
-    const ringsTex2 = new THREE.TextureLoader().load("texture/ringsUranus.webp")
+    const ringsTex2 = new THREE.TextureLoader().load("archivos/texture/ringsUranus.webp")
 
     const pos2 = ringsGeo2.attributes.position;
     const uv2 = ringsGeo2.attributes.uv;
@@ -273,7 +273,7 @@ function sistemaSolar(){
     scene.add(rings2);
 
     const neptuneGeo = new THREE.SphereGeometry( sizesScale/28, 200, 100 );
-    const neptuneTex = new THREE.TextureLoader().load("texture/neptune.jpg")
+    const neptuneTex = new THREE.TextureLoader().load("archivos/texture/neptune.jpg")
     const neptuneMat = new THREE.MeshPhongMaterial( { map: neptuneTex, flatShading: true } );
     neptune = new THREE.Mesh(neptuneGeo,neptuneMat);
     neptune.rotation.x = 28.32*Math.PI/180;
