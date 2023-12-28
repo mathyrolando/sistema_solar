@@ -330,7 +330,7 @@ function animate() {
 function render() {
 
     const timer = Date.now() - start;
-    const speed = 0.00001;
+    const speed = 0.0005;
 
     mercury.rotation.y = timer * speed / 365 * 58.6462;
     mercury.position.z = aMercury*distancesScale*Math.cos(timer * speed/0.240846) + movMercury*distancesScale;
