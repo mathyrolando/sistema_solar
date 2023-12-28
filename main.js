@@ -1,3 +1,8 @@
+import * as THREE from 'three';
+
+import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 let camera, controls, scene, renderer, effect;
 
 let earth, moon, sun, mercury, venus, mars, jupiter, saturn, uranus, neptune;
